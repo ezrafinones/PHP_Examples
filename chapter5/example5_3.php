@@ -18,11 +18,11 @@ $values = array(
 	'smarts' => "some"
 );
 
-if ($_POST['submitted']) {
+if (isset($_POST['submitted'])) {
 	$sortType = $_POST['sort_type'];
 	
 	if ($sortType == "usort" || $sortType == "uksort" || $sortType == "uasort") {
-		$sortType($values, "user_sort");
+		$sortType($values, "user_sort"); //user_sort
 	}
 	else {
 		$sortType($values);
@@ -49,7 +49,7 @@ if ($_POST['submitted']) {
 
 	<p align="center"><input type="submit" value="Sort" name="submitted" /></p>
 
-	<p>Values <?= $_POST['submitted'] ? "sorted by {$sortType}" : "unsorted"; ?>:</>
+	<p>Values <?= isset($_POST['submitted']) ? "sorted by {$sortType}" : "unsorted"; ?>:</>
 
 	<ul>
 		<?php foreach ($values as $key => $value) {

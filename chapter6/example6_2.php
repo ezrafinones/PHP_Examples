@@ -6,13 +6,11 @@ public $bar = "bar";
 public $baz = 17.0;
 
 	function firstFunction()
-		{
-			
+		{	
 		}
 
 	function secondFunction()
 	{
-	
 	}
 }
 
@@ -22,7 +20,6 @@ public $quux = false;
 
 	function thirdFunction()
 	{
-
 	}
 }
 
@@ -51,7 +48,7 @@ public $quux = false;
 function getCallableMethods($object)
 {
 	$methods = get_class_methods(get_class($object));
-
+	
 	if (get_parent_class($object)) {
 		$parent_methods = get_class_methods(get_parent_class($object));
 		$methods = array_diff($methods, $parent_methods);
@@ -98,7 +95,7 @@ function getChildClasses($object)
 		if (substr($class, 0, 2) == '__') {
 			continue;
 		}
-		$child = $class; //$child = new $class; 
+		 $child = $class;//$child = new $class; 
 
 		if (get_parent_class($child) == get_class($object)) {
 			$children[] = $class;
