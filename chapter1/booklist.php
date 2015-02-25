@@ -1,6 +1,6 @@
 <?php
 
-$myDB = new mysqli('localhost', 'erza', 'ezra', 'library');
+$myDB = new mysqli('localhost','root','ezra','library'); 
 // make sure the above credentials are correct for your environment
 if ($myDB->connect_error) 
 {
