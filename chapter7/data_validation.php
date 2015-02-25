@@ -1,9 +1,9 @@
 <?php
-	$name = isset($_POST['name']);
-	$mediaType = isset($_POST['media_type']);
-	$filename = isset($_POST['filename']);
-	$caption = isset($_POST['caption']);
-	$status = isset($_POST['status']);
+	$name = $_POST['name'];
+	$mediaType = $_POST['media_type'];
+	$filename = $_POST['filename'];
+	$caption = $_POST['caption'];
+	$status = $_POST['status'];
 	
 	$tried = (isset($_POST['tried']) == 'yes');
 	
